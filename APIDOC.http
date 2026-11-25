@@ -1,0 +1,78 @@
+### Register User API
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username": "AJ1",
+    "email": "AJ1@gmail.com",
+    "password": "AJ123"
+}
+
+
+
+### Login User API
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username": "AJ1",
+    "password": "AJ123"
+}
+
+
+
+###
+GET  http://127.0.0.1:8000/register/
+Accept: application/json
+
+
+### Product List API
+GET http://127.0.0.1:8000/products/
+Accept: application/json
+Authorization: Token 4767705fecfac3c01f8bdb38962dadb90c2f85af
+
+
+### Product Create API
+POST http://127.0.0.1:8000/products/
+Content-Type: application/json
+Authorization: Token 4767705fecfac3c01f8bdb38962dadb90c2f85af
+
+{
+    "product_name": "Product 1",
+    "product_code": "P001",
+    "category": "Category 1",
+    "price": 15000,
+    "stock_quantity": 100
+}
+
+
+### Product Detail API
+GET http://127.0.0.1:8000/products/1/
+Accept: application/json
+Authorization: Token 4767705fecfac3c01f8bdb38962dadb90c2f85af
+
+### Product Update API
+PUT http://127.0.0.1:8000/products/1/
+Content-Type: application/json
+Authorization: Token 4767705fecfac3c01f8bdb38962dadb90c2f85af
+
+{
+    "product_name": "Product 1",
+    "product_code": "P001",
+    "category": "Category 1",
+    "price": 15000,
+    "stock_quantity": 50
+}
+
+
+### Register User API
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username": "AJ2",
+    "email": "AJ2@gmail.com",
+    "password": "AJ123"
+}
+
+
