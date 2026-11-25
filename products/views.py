@@ -14,6 +14,7 @@ from rest_framework import serializers
 
 
 class ProductListCreateView(APIView):
+    authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
@@ -29,6 +30,7 @@ class ProductListCreateView(APIView):
         return Response(serializer.errors);
 
 class ProductDetailView(APIView):
+    authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get(self, request, pk):
@@ -49,6 +51,7 @@ class ProductDetailView(APIView):
         product.delete()
         return Response({'message': "Product deleted successfully"})
 
+  
 
 class RegisterView(APIView):
     permission_classes = [AllowAny]
